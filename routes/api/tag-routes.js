@@ -46,7 +46,9 @@ router.post('/', (req, res) => {
   .then((tag) => {
     res.status(200).json(tag)
   })
+  .catch((err) => {
     res.status(500).json(err)
+  })
 });
 
 router.put('/:id', (req, res) => {
